@@ -35,10 +35,7 @@ int BFS(int g[n][n], int s, int t, int parent[n])
                 q.push(v);
                 visited[v] = 1;
 
-                if (flow > g[u][v])
-                {
-                    flow = g[u][v];
-                }
+                flow = min(flow, g[u][v]);
             }
         }
     }
